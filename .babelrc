@@ -1,5 +1,5 @@
 {
     "presets": [
-      "@babel/preset-env"
+      "stage-3"
     ]
 }
