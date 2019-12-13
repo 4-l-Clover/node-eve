@@ -4,20 +4,24 @@
   "description": "test",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node src/index.js",
+    "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --mode=production"
   },
   "author": "wang",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.7.5",
-    "@babel/node": "^7.7.4",
-    "@babel/preset-env": "^7.7.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-node": "0.0.1-security",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
     "clean-webpack-plugin": "^3.0.0",
     "nodemon": "^2.0.2",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^4.41.2"
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
     "axios": "^0.19.0"
