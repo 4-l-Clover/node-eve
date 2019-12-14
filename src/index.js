@@ -1,5 +1,9 @@
 import 'babel-polyfill';
 
+if (typeof window.eVe !== 'object') {
+  window.eVe = {};
+}
+
 eVe.caches = {};
 eVe.mode = 'tests';
 eVe.testStarted = '';
