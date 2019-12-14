@@ -3,7 +3,7 @@ const path = require('path');
 
 // Webpack Plugins
 const webpack = require('webpack');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 
@@ -32,7 +32,7 @@ module.exports = {
     },
 
     plugins: [
-        new CleanWebpackPlugin('build')
+        new CleanWebpackPlugin()
     ],
 
     optimization: {
