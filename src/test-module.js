@@ -35,15 +35,8 @@ eVe.addTestButtons = function () {
 eVe.countObjectProperties = function (anObj) {
     let propertiesNum = 0;
 
-	for(prop in anObj) {
-		if(anObj.hasOwnProperty(prop)) {
-			for(kid in anObj[prop]) {
-				if(anObj[prop].hasOwnProperty(kid)) {
-					propertiesNum++;
-				}
-			}
-		}
-    }
+    for (const subKey of Object.keys(anObj)) 
+        propertiesNum += Object.keys(subKey).length;
     
-	return propertiesNum;
+    return propertiesNum;
 }
