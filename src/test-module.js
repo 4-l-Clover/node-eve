@@ -35,7 +35,7 @@ eVe.addTestButtons = function () {
 eVe.countObjectProperties = function (anObj) {
     let propertiesNum = 0;
 
-    for (var sub_key of Object.keys(anObj))
+    for (let sub_key of Object.keys(anObj))
         propertiesNum += Object.keys(sub_key);
 
     return propertiesNum;

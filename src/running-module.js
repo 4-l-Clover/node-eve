@@ -47,14 +47,14 @@ eVe.runAllTests = function () {
     let menuItems = mobileMenu.getElementsByTagName('a');
     let newLinks = [];
 
-    for (var i = 0; i < menuItems.length; i++) {
+    for (let i = 0; i < menuItems.length; i++) {
         newLink = document.createElement('a');
         newLink.href = menuItems[i].href;
         newLink.innerHTML = menuItems[i].innerHTML;
         newLinks.push(newLink);
     }
 
-    for (var v = 0; v < newLinks.length; v++) {
+    for (let v = 0; v < newLinks.length; v++) {
         item = newLinks[v];
         testlinks_div.appendChild(item);
         item.addEventListener("click", function (e) { eVe.runALinkTest(this); });
@@ -96,7 +96,7 @@ eVe.runAllTests = function () {
         }
     }
 
-    for (i = 0; i < testFormContent.getElementsByTagName('a').length; i ++) {
+    for (let i = 0; i < testFormContent.getElementsByTagName('a').length; i ++) {
         item = testFormContent.getElementsByTagName('a')[i];
 
         item.addEventListener("click", function (e) {

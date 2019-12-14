@@ -100,8 +100,8 @@ eVe.saveTests = function () {
 
 // eVe.download(content, 'eVe_testScenarios.txt' );
 eVe.download = function (content, fileName) {
-    var downloadLink = document.createElement("a");
-    var file = new Blob([content], { type: 'text/plain' });
+    let downloadLink = document.createElement("a");
+    let file = new Blob([content], { type: 'text/plain' });
     downloadLink.href = URL.createObjectURL(file);
     downloadLink.download = fileName;
     downloadLink.click();
