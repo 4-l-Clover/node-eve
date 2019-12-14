@@ -36,7 +36,7 @@ eVe.countObjectProperties = function (anObj) {
     let propertiesNum = 0;
 
     for (let sub_key of Object.keys(anObj))
-        propertiesNum += Object.keys(sub_key);
+        propertiesNum += Object.keys(sub_key).length;
 
     return propertiesNum;
 }
