@@ -1,12 +1,44 @@
+const faker = require('faker');
+
 // This is called from eVe.init()
 eVe.installTestModule = function () {
 
     eVe.addTestButtons();
+    eVe.autoAddScenario(10);
 
     eVe.countTests = eVe.countObjectProperties(eVe.tests);
 
     alert('Testing: Currently there are ' + eVe.countTests + ' saved test scenarios.');
 
+}
+
+// This is called from eVe.installTestModule()
+eVe.autoAddScenario = function(times) {
+    let requestName = "form_register1_submit";
+
+    for (let i = 0; i < times; i ++) {
+        let fakeData = {
+            activeornot2: 'ACTIVE DUTY ATHLETE',
+            names: faker.name.findName(),
+            email1: faker.internet.email(),
+            phonenumber: faker.phone.phoneNumber(),
+            gender: "gender_0",
+            rank: faker.random.number(),
+            street: faker.address.streetAddress(),
+            city: faker.address.city(),
+            usaStates: faker.address.country(),
+            zipcode: faker.address.zipCode(),
+            servicedogs: "Yes",
+            ifdog: faker.random.words(),
+            names2: faker.name.findName(),
+            phonenumber2: faker.phone.phoneNumber(),
+            email2: faker.internet.email(),
+            relation2: faker.random.words(),
+            files1: faker.system.filePath()
+        };
+
+        eVe.addAtestScenario(requestName, JSON.stringify(fakeData), '');
+    }
 }
 
 // This is called from eVe.installTestModule()
