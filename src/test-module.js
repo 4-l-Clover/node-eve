@@ -16,19 +16,24 @@ eVe.installTestModule = function () {
 eVe.autoAddScenario = function(times) {
     let requestName = "form_register1_submit";
 
+    let activeornot2List = ["ACTIVE DUTY ATHLETE", "VETERAN ATHLETE", "INTERNATIONAL ATHLETE", "RFF SUPPORT"];
+    let genderList = ["gender_0", "gender_1"];
+    let servicedogsList = ["Yes", "No"];
+    let stateList = ["usaStates_0", "usaStates_1", "usaStates_2", "usaStates_3", "usaStates_4", "usaStates_5"];
+
     for (let i = 0; i < times; i ++) {
         let fakeData = {
-            activeornot2: 'ACTIVE DUTY ATHLETE',
+            activeornot2: faker.random.arrayElement(activeornot2List),
             names: faker.name.findName(),
             email1: faker.internet.email(),
             phonenumber: faker.phone.phoneNumber(),
-            gender: "gender_0",
-            rank: faker.random.number(),
+            gender: faker.random.arrayElement(genderList),
+            rank: faker.random.number(100),
             street: faker.address.streetAddress(),
             city: faker.address.city(),
-            usaStates: faker.address.country(),
+            usaStates: faker.random.arrayElement(stateList),
             zipcode: faker.address.zipCode(),
-            servicedogs: "Yes",
+            servicedogs: faker.random.arrayElement(servicedogsList),
             ifdog: faker.random.words(),
             names2: faker.name.findName(),
             phonenumber2: faker.phone.phoneNumber(),
