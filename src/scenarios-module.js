@@ -66,7 +66,7 @@ eVe.addAtestScenario = function (requestName, inputsStr, result) {
 
     eVe.countTests++;
 
-    console.log("Scenario is succesfully saved, current number is ...", eVe.countTests);
+    alert("Scenario is succesfully saved, current number is ..." + eVe.countTests);
     return true;
 
 }
