@@ -42,7 +42,9 @@ eVe.autoAddScenario = function(times) {
             files1: faker.system.filePath()
         };
 
-        eVe.addAtestScenario(requestName, JSON.stringify(fakeData), '');
+        console.log(">>>>>>>>>>> fake data is", fakeData);
+
+        eVe.addAtestScenario(requestName, JSON.stringify(fakeData), 'This is fake scenario');
     }
 }
 
